@@ -36,5 +36,52 @@ int main() {
     // 1 1 1 1 1
     // 0 0 1 0 0
 
-    return 0;
-}
+printf("   1  2  3  4  5  6  7  8  9  10\n");
+printf(" --------------------------------");
+    int tabuleiro[10][10] = {
+      
+    {0,0,0,0,0,0,0,0,0,0},
+    {0,0,0,0,0,0,0,0,0,0},
+    {0,0,0,0,0,0,0,0,0,0},
+    {0,0,0,0,0,0,0,0,0,0},
+    {0,0,0,0,0,0,0,0,0,0},
+    {0,0,0,0,0,0,0,0,0,0},
+    {0,0,0,0,0,0,0,0,0,0},
+    {0,0,0,0,0,0,0,0,0,0},
+    {0,0,0,0,0,0,0,0,0,0},
+    {0,0,0,0,0,0,0,0,0,0}
+    }; 
+    
+    
+    
+    //impressão das letras do tabuleiro;
+    
+       
+    
+    
+    //  Navio horizontal;
+    for(int i = 0; i < 1; i++){
+    tabuleiro [0][0] = 3, tabuleiro[0][1] = 3, tabuleiro[0][2] = 3;
+    }
+
+    {
+    //navio vertical;
+    for(int i = 0; i < 1; i++)
+    tabuleiro[8][3] = 3, tabuleiro[7][3] = 3, tabuleiro[6][3] = 3;
+    }
+    //impressão do tabuleiro;
+    printf("\n");
+    for (int i = 0; i < 10; i++) {
+        printf("%c| ", 'A' + i);
+        for (int j = 0; j < 10; j++) {
+            printf("%-2d ", tabuleiro[i][j]);
+        }
+        printf("|\n");
+    }
+        
+    }
+
+
+
+    
+
