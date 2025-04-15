@@ -36,8 +36,10 @@ int main() {
     // 1 1 1 1 1
     // 0 0 1 0 0
 
-printf("   1  2  3  4  5  6  7  8  9  10\n");
-printf(" --------------------------------");
+printf("   1  2  3  4  5  6  7  8  9  10\n");// barra horizontal de numeros do tabuleiro;
+printf(" --------------------------------");//barra horizontal abaixo dos numeros para formatar o tabuleiro;
+
+//matriz do tabuleiro com zeros representando o mar ou seja, a matriz começa zerada sem nenhum navio;
     int tabuleiro[10][10] = {
       
     {0,0,0,0,0,0,0,0,0,0},
@@ -54,18 +56,39 @@ printf(" --------------------------------");
     
     
     
-    //impressão das letras do tabuleiro;
+   //impressão das habilidades do tabuleiro;
     
-       
-    
-    
-    //  Navio horizontal;
+
+
+
+    //impressão dos navios do tabuleiro;
+
+    //NAVIO diagonal 1
+    //loop para percorrer a diagonal primaria e posicionar o navio;
+for(int i = 0; i < 3; i++){
+    for(int j = 0; j < 3; j++){
+    if(i == j){
+        tabuleiro[i][j] = 3;
+        
+    }
+    }
+}
+    //NAVIO diagonal 2
+    //loop para percorrer a diagonal secundária e posicionar o navio;
+    for (int i = 2; i < 5; i++) {
+        for (int j = 9; j > 6; j--) {
+            if (i + j == 11) {
+                tabuleiro[i][j] = 3;
+            }
+        }
+    }
+    //posicionando Navio horizontal;
     for(int i = 0; i < 1; i++){
-    tabuleiro [0][0] = 3, tabuleiro[0][1] = 3, tabuleiro[0][2] = 3;
+    tabuleiro [0][5] = 3, tabuleiro[0][6] = 3, tabuleiro[0][7] = 3;
     }
 
     {
-    //navio vertical;
+    //posicionando navio vertical;
     for(int i = 0; i < 1; i++)
     tabuleiro[8][3] = 3, tabuleiro[7][3] = 3, tabuleiro[6][3] = 3;
     }
@@ -80,7 +103,6 @@ printf(" --------------------------------");
     }
         
     }
-
 
 
     
